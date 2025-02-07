@@ -7,7 +7,7 @@ const _hostname = document.location.hostname;
 
 function requestApi(searchTerm) {
     let url = `http://localhost:3000/artists?name_like=${searchTerm}`;
-    if (_hostname === 'localhost') {
+    if (_hostname !== 'localhost') {
         url = `https://samuelkorosi.github.io/spotify/api-artists/artists.json?name_like=${searchTerm}`;        
     }
     
@@ -23,7 +23,7 @@ function displayResults(results) {
     const artistImage = document.getElementById('artist-img');
     const artistGenre = document.getElementById('artist-genre');
 
-    if (_hostname === 'localhost') {
+    if (_hostname !== 'localhost') {
         results = results.artists;
     }
 
