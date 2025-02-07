@@ -1,0 +1,202 @@
+body {
+    background-color: #000;
+    color: var(--white);
+    font-family: var(--font-dm);
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    border: none;
+
+    border-radius: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &.btn-primary {
+        background-color: var(--white);
+    }
+
+    &.btn-secondary {
+        background-color: transparent;
+        color: var(--white);
+        border: 1px solid var(--color-secondary);
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    width: 19rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .sidebar-navigation {
+        background-color: var(--bg-card-area);
+        color: var(--color-secondary);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+
+        .logo {
+            background-color: var(--bg-card-area);
+            display: flex;
+            border-radius: 0.5rem;
+            padding: 1rem;
+
+            img {
+                width: 5rem;
+            }
+        }
+
+        ul {
+            padding: 0 1.25rem;
+
+            li {
+                padding: var(--equivalent-10) 0;
+
+                a {
+                    color: var(--color-secondary);
+                    text-decoration: none;
+                    font-size: var(--font-size-default);
+                    font-weight: 600;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: var(--equivalent-10);
+                }
+            }
+        }
+    }
+
+    div.library {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: var(--equivalent-10);
+        padding: 1rem;
+
+        background-color: var(--bg-card-area);
+        color: var(--color-secondary);
+        font-size: var(--font-size-default);
+        border-radius: 0.5rem;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            button {
+                color: var(--color-secondary);
+                border: 0;
+
+                &.btn-secondary {
+                    transform: none;
+                }
+            }
+
+            * {
+                font-size: var(--font-size-default);
+            }
+        }
+
+        .playlist {
+            width: 100%;
+            border-radius: 0.25rem;
+            background-color: var(--bg-card-highlight);
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 1rem;
+                padding: 1rem;
+                color: var(--white);
+
+                span.title {
+                    font-weight: 600;
+                }
+
+                button {
+                    color: #000;
+                }
+            }
+        }
+
+        .cookies {
+            margin: 2rem 1rem;
+
+            a {
+                text-decoration: none;
+                color: var(--color-secondary);
+            }
+        }
+
+        .cookies a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.25rem 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: linear-gradient(130deg, #ae2896, #509bf5);
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.5rem;
+
+        h3 {
+            text-transform: uppercase;
+            font-size: var(--font-size-default);
+            font-weight: 700;
+        }
+
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        font-size: var(--font-size-default);
+        text-wrap-mode: nowrap;
+
+        transition: all 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+}

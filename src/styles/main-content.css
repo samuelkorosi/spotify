@@ -1,0 +1,380 @@
+/* HEADER */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 1rem 1rem 1rem 20.5rem;
+
+    .header-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        background-color: var(--bg-card-area);
+
+        .navigation {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .arrow-left {
+                margin-right: 1.25rem;
+            }
+
+            .arrow-right {
+                cursor: default;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                background: var(--bg-icon);
+                background-color: var(--bg-arrow-color);
+                border-radius: 50%;
+                border: none;
+            }
+
+            .fa-chevron-left {
+                color: var(--white);
+            }
+
+            .fa-chevron-right {
+                color: var(--color-secondary);
+            }
+
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            width: 23rem;
+            height: 3.25rem;
+            margin-left: 0.5rem;
+            background-color: var(--bg-card-highlight);
+            border-radius: 10rem;
+            border: 1px solid transparent;
+
+            img {
+                width: 1rem;
+                height: 1rem;
+                margin-left: var(--equivalent-10);
+            }
+
+            input {
+                width: 100%;
+                padding: 0 2rem 0 1rem;
+                background: transparent;
+                border: none;
+                color: var(--white);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                outline: none;
+            }
+        }
+
+        .login-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .subscribe {
+                background-color: transparent;
+                color: #A7A7A7;
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+                text-wrap-mode: nowrap;
+            }
+
+            .login {
+                color: var(--black);
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+            }
+        }
+    }
+
+    /* PLAYLISTS */
+    .playlist-container {
+        height: calc(100vh - 88px - 86px - 6.6rem);
+        padding: 2rem 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--bg-card-area);
+
+        .header {
+            display: flex;
+            flex-direction: column;
+
+            gap: 2rem;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--white);
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--white);
+            }
+        }
+
+        .result-playlist {
+            height: 100%;
+        }
+    }
+
+    /* SCROLL */
+    .scroll-container {
+        max-height: calc(100% - 88px - 1.5rem);
+        margin: 1.5rem;
+        overflow-y: auto;
+        /* Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: var(--bg-card-highlight) transparent;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        /* Chrome, Edge e Safari */
+        width: 5px;
+        border-radius: 1rem;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 1rem;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background-color: var(--bg-card-highlight);
+        border-radius: 1rem;
+    }
+}
+
+/* CARDS PLAYLIST */
+.cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 2rem;
+
+    .card {
+        position: relative;
+        width: 220px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 0.5rem;
+
+        cursor: pointer;
+
+        transition: all 0.3s;
+
+        &.card1 {
+            background-color: rgb(0, 100, 80);
+        }
+
+        &.card2 {
+            background-color: rgb(132, 0, 231);
+        }
+
+        &.card3 {
+            background-color: rgb(30, 50, 100);
+        }
+
+        &.card4 {
+            background-color: rgb(140, 25, 50);
+        }
+
+        &.card5 {
+            background-color: rgb(232, 17, 91);
+        }
+
+        &.card6 {
+            background-color: rgb(83, 122, 161);
+        }
+
+        &.card7 {
+            background-color: rgb(142, 102, 172);
+        }
+
+        &.card8 {
+            background-color: rgb(20, 138, 8);
+        }
+
+        &.card9 {
+            background-color: rgb(30, 50, 100);
+        }
+
+        &.card10 {
+            background-color: rgb(233, 20, 41);
+        }
+
+        &.card11 {
+            background-color: rgb(80, 55, 80);
+        }
+
+        &.card12 {
+            background-color: rgb(216, 64, 0);
+        }
+
+        &.card13 {
+            background-color: rgb(186, 93, 7);
+        }
+
+        &.card14 {
+            background-color: rgb(0, 30, 80);
+        }
+
+        &.card15 {
+            background-color: rgb(60, 30, 80);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 1rem;
+            position: absolute;
+            color: var(--white);
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: auto;
+            width: 125px;
+            transform: rotate(25deg) translate(18%, -2%);
+        }
+    }
+
+    .card:hover {
+        transform: translateY(-0.5rem);
+    }
+}
+
+/* CARD ARTISTA */
+.artist {
+    --column-count: 5;
+    --grid-gap: 1.5rem;
+    --min-container-width: 372px;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    min-width: 767px;
+}
+
+.artist-card {
+    /* -ms-flex: 1;
+    flex: 1; */
+    position: relative;
+    /* width: 100%; */
+    isolation: isolate;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: #181818;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.artist-card:hover {
+    background-color: var(--bg-card-highlight);
+}
+
+.card-img {
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.artist-img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 62px;
+}
+
+.card-text a {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.artist-name {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-block-end: 0.5rem;
+}
+
+.artist-categorie {
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.play {
+    position: relative;
+}
+
+.play .fa-play {
+    position: absolute;
+    right: var(--equivalent-10);
+    /* top: 120px; */
+    margin-top: 80%;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    font-size: var(--equivalent-14);
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.artist-card:hover .play .fa-play {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.play .fa-play:hover {
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+#result-artist {
+    padding: 1.25rem 2.50;
+}

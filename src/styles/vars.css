@@ -1,0 +1,18 @@
+:root {
+    /* FONT */
+    --font-dm: "DM Sans", sans-serif;
+    --font-size-default: 0.875rem;
+
+    /* COLORS */
+    --bg-card-area: #121212;
+    --black: #000;
+    --white: #FFF;
+    --color-secondary: #B3B3B3;
+    --bg-card-highlight: #242424;
+    --bg-icon: #131313;
+    --bg-arrow-color: rgba(0, 0, 07);
+
+    /* SIZES */
+    --equivalent-10: 0.625rem;
+    --equivalent-14: 0.875rem;
+}
