@@ -90,9 +90,14 @@
         <!-- PLAYLIST -->
         <section class="playlist-container">
             <div id="result-playlist" class="result-playlist">
-                <div class="header">
+                <div id="header-playlist" class="header">
                     <h1>Boas Vindas</h1>
                     <h2>Navegar por todas as seções</h2>
+                </div>
+                <!-- QUANDO A BUSCA NÃO RETORNAR DADOS -->
+                <div id="result-none" class="result-none hidden">
+                    <h2>Não encontrei 😶‍🌫️</h2>
+                    <h2>Mas que tal ouvir uma dessas playlists?</h2>
                 </div>
                 <!-- LISTA DE CARDS -->
                 <div class="scroll-container">
@@ -161,18 +166,21 @@
                 </div>
             </div>
             <div id="result-artist" class="hidden">
-                <div class="grid-container">
-                    <div class="artist-card">
-                        <div class="card-img">
-                            <img id="artist-img" class="artist-img" />
-                            <div class="play">
-                                <span class="fa fa-solid fa-play"></span>
+                <!-- CARDS DE ARTISTAS -->
+                <div class="scroll-container">
+                    <div class="grid-container" id="artist-card-list">
+                        <div class="artist-card hidden" id="artist-card">
+                            <div class="card-img">
+                                <img id="artist-img" class="artist-img" />
+                                <div class="play">
+                                    <span class="fa fa-solid fa-play"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-text">
-                            <a class="vst" href=""></a>
-                            <span class="artist-name" id="artist-name"></span>
-                            <span class="artist-categorie" id="artist-genre">Artista</span>
+                            <div class="card-text">
+                                <a class="vst" href=""></a>
+                                <span class="artist-name" id="artist-name"></span>
+                                <span class="artist-categorie" id="artist-genre">Artista</span>
+                            </div>
                         </div>
                     </div>
                 </div>
